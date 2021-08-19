@@ -1,0 +1,4 @@
+flask[async]
+requests-async
+python-gitlab
+python-jenkins

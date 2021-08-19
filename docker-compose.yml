@@ -1,0 +1,16 @@
+version: "3.7"
+services:
+  chabot:
+#    image: chatbot
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: chabot
+    env_file:
+      - ./env
+
+    volumes:
+    - ./logs:/opt/logs
+    ports:
+      - 9998:9999
+
