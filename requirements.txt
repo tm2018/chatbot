@@ -2,3 +2,7 @@ flask[async]
 requests-async
 python-gitlab
 python-jenkins
+pymysql==1.0.2
+alibabacloud_tea_console
+alibabacloud_ecs20140526==2.1.0
+alibabacloud_dcdn20180115==1.0.2

@@ -1,11 +1,17 @@
 # 基于钉钉企业内部机器人开发的聊天机器人
 ## 项目描述
 ```angular2html
-基于钉钉企业内部机器人开发的聊天机器人
-1.发送命令进行交互，后端执行对应命令
+基于flask开发的钉钉企业内部机器人，通过命令进行交互，后端执行预定义的操作。
+
+目前项目用于自动化运维，具体功能如下所述，更多功能等待完善
 ```
+## 功能说明
+* 刷新cdn（阿里云）缓存
+* 添加/删除云（阿里云）安全组规则
+* 版本发布
+* 
 ## 使用方式
-#### 一、创建钉钉机器人并获取AppSecret
+#### 一、创建钉钉机器人
 ###### 1.登录钉钉开发者后台
 ```angular2html
 访问网站 https://open-dev.dingtalk.com/#/，登录到钉钉后台
@@ -21,11 +27,20 @@ PS： 需要具备企业管理员权限
 ```angular2html
 点击"基础信息"，获取到AppSecret
 ```
-#### 二、设置环境变量文件
+#### 二、启动项目
+##### 2.1 修改配置
+
 ```angular2html
-1.复制env.example为env
-2.修改config目录下配置文件
-其中APP_SECRET填写为1.3获取到的AppSecret
+# cp -a env.example env
+...
+# 
+FLASK_ENV=development
+chatbot_env=dev
+...
+
+# vim config/settings.py 
+修改APP_SECRET为1.3获取到的AppSecret
+修改APP_SECRET为1.3获取到的AppSecret
 ```
 #### 三、构建和启动
 ```
